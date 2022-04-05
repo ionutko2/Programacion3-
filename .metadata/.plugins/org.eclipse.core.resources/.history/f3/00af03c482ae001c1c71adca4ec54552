@@ -1,0 +1,21 @@
+import java.util.Random;
+public class Lista {
+	public static void main(String[] args) {
+		long t;
+		long tiempo = 0;
+		for (int k = 0; k < 100; k++) {
+		Random aleatorio = new Random();
+		SeleccionBurbuja hola = new SeleccionBurbuja();
+		for(int i = 0; i < hola.vector.length; i++) {
+			hola.vector[i] = aleatorio.nextInt(999999999);
+		}
+		
+		t = System.currentTimeMillis();
+		hola.seleccionBurbujaSacudida();
+		t = System.currentTimeMillis() - t;
+		System.out.println("Prueba número " + k + " Primer número " + hola.vector[0] + " Último número " + hola.vector[hola.vector.length - 1]);
+		tiempo = tiempo + t;
+		}
+		System.out.println(tiempo/100 + " ms");
+	}
+}

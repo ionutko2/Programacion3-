@@ -1,0 +1,22 @@
+package ejercicio1;
+
+import java.util.Random;
+
+public class ProgramaProfe {
+	public static void main (String [] Args) {
+		final int MAXELTOS = 10;
+		
+		PilaEnterosProfe p = new PilaVectorProfe();
+		Random r = new Random();
+		
+		for ( int i = 0; i < MAXELTOS; i++) {
+			int x = r.nextInt();
+			p.push(x);
+		}
+		for ( int i = 0; i < MAXELTOS; i++) {
+			int x = p.pop();
+			System.out.println();
+		}
+		System.out.println();
+	}
+}

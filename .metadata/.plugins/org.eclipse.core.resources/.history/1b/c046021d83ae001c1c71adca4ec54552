@@ -1,0 +1,21 @@
+import java.util.Random;
+public class Lista {
+	public static void main(String[] args) {
+		long t;
+		long tiempo = 0;
+		for (int k = 0; k < 100; k++) {
+		Random aleatorio = new Random();
+		Shellshort hola = new Shellshort();
+		for(int i = 0; i < hola.lista.length; i++) {
+			hola.lista[i] = aleatorio.nextInt(999999999);
+		}
+		
+		t = System.currentTimeMillis();
+		hola.shellshort_bien();
+		t = System.currentTimeMillis() - t;
+		System.out.println("Prueba número " + (k + 1) + " Primer número " + hola.lista[0] + " Último número " + hola.lista[hola.lista.length - 1]);
+		tiempo = tiempo + t;
+		}
+		System.out.println(tiempo/100 + " ms");
+	}
+}

@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+D:\Ionut\3TrimestreProgramacion\.metadata\.plugins\org.eclipse.jdt.core
+75931715.index
+1865797976.index
+1745456520.index
+171521544.index

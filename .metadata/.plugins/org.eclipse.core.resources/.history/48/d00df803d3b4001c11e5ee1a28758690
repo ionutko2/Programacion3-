@@ -1,0 +1,25 @@
+package ejercicio2;
+
+public class PartidoProfe {
+	private final String nombre;
+	private int votos;
+	
+	public String getNombre() {
+		return nombre;
+	}
+	public int getVotos() {
+		return votos;
+	}
+	public void addVotos ( int votos ) {
+		if ( votos > 0) {
+			this.votos += votos;
+		}
+	}
+	public PartidoProfe ( String nombre) {
+		this.nombre = nombre;
+		votos = 0;
+	}
+	public PartidoProfe(String partido, int votos2) {
+		// TODO Auto-generated constructor stub
+	}
+}

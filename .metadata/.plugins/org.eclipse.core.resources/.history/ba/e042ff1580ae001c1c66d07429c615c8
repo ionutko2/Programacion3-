@@ -1,0 +1,21 @@
+import java.util.Random;
+public class Lista {
+	public static void main(String[] args) {
+		Random aleatorio = new Random();
+		Shellshort hola = new Shellshort();
+		for(int i = 0; i < hola.lista.length; i++) {
+			hola.lista[i] = aleatorio.nextInt(999999999999999);
+		}
+		
+		for(int i = 0; i < hola.lista.length; i++) {
+			System.out.println("al principio " + hola.lista[i]);
+		}
+		System.out.println(System.currentTimeMillis());
+		hola.shellshort_bien();
+		System.out.println(System.currentTimeMillis());
+		for(int i = 0; i < hola.lista.length; i++) {
+			System.out.println("al final " + hola.lista[i]);
+		}
+		
+	}
+}

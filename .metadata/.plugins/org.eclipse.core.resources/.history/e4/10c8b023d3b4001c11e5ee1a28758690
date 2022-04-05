@@ -1,0 +1,52 @@
+package ejercicio2;
+/**
+ * almacena los datos de unas elecciones y determina el numero de diputados de los partidos
+ * @author alu
+ *
+ */
+public class VotacionProfe {
+	private final int MAXSIZE = 100;
+	//lista de partidos con sus votos
+	PartidoProfe[] l = new PartidoProfe[MAXSIZE];
+	 int partidos = 0;
+	 int diputados;
+	 
+	 public VotacionProfe (int diputados) {
+		 this.diputados = diputados;
+	 }
+	 
+	 public void insertarVotos ( String partido, int votos) {
+		 for( int i = 0; i < partidos ; i++) {
+			 if (l[i].getNombre().equals(partido)) {
+				 l[i].addVotos(votos);
+				 return;
+			 }
+		 }
+		 l[partidos++] = new PartidoProfe(partido, votos);
+	 }
+	 /**
+	  * Determinar el numero de diputados de cada partido con los datos actuales
+	  */
+	 public void calcular() {
+		 int votosTotal = 0;
+		 PartidoProfe [] aux = new PartidoProfe[diputados*partidos];
+		 
+		 int porcentaje = (int)(votosTotal /100.0 * 5);
+		 for (int i= 0; i < partidos; i++) {
+			 if ( l[i].getVotos() <= porcentaje) {
+				 aux[i] = l[i];
+			 }else {
+				 aux[i] = new PartidoProfe(l[i].getNombre(),0);
+			 }
+			 
+			 votosTotal += l[i].getVotos();
+		 }
+	 }
+	 public String toString () {
+		 String salida = "Partido\tVotos";
+		 for ( int i = 0; i < partidos; i++) {
+			 salida += "\n" + l[i].getNombre() + "\t" + l[i].getVotos(); 
+		 }
+		 return salida;
+	 }
+}

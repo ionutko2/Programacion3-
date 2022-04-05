@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;quickshort&apos; to &apos;Quickshort&apos;&#x0D;&#x0A;- Original project: &apos;Listas&apos;&#x0D;&#x0A;- Original element: &apos;quickshort&apos;&#x0D;&#x0A;- Renamed element: &apos;Quickshort&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;quickshort&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{quickshort.java[quickshort" matchStrategy="1" name="Quickshort" qualified="false" references="true" similarDeclarations="false" stamp="1648455561482" textual="false" version="1.0"/>
+</session>

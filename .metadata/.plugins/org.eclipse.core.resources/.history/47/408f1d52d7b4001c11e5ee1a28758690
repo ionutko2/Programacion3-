@@ -1,0 +1,22 @@
+package ejercicio2;
+
+public class ListaPartido {
+	private final int MAXSIZE=100;
+	/**
+	  *Lista de partidos con sus votos
+	  */
+	Partido [] l= new Partido[MAXSIZE];
+	int limite;
+	
+	public void insertarVotos(String partido, int votos) {
+		for(int i=0;i<limite ;i++) {
+			if(l[i].getNombre().equals(partido)) {
+				l[i].addVotos(votos);
+				return;
+			}
+		}
+			l[limite++]=new Partido(partido,votos);
+			return;
+		
+	}
+}
